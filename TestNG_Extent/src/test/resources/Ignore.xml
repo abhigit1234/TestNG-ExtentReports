@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="TestIgnore">
+		<classes>
+			<class name="TestNG.Ignoring">
+				<methods>
+					<include name="Test1" />
+					<include name="Test2" />
+					<include name="Test3" />
+					<include name="Test4" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- TestIgnore -->
+</suite> <!-- Suite -->
