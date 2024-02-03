@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="OrangeHrmLogin">
+		<classes>
+			<class name="TestNG.OrangeHRM_Xml">
+				<methods>
+					<include name="LaunchPage" />
+					<include name="LoginPage" />
+					<include name="VerifyDashBoard" />
+					<include name="VerifyMyActions" />
+					<include name="VerifyAdmin" />
+					<include name="NavigateToPIM" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AmazonLaunch">
+		<classes>
+			<class name="TestNG.Amazon">
+				<methods>
+					<include name="LaunchAmazon" />
+					<include name="SearchItem" />
+					<include name=" VerifyDepartment" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
