@@ -4,12 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameter;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Amazon {
 	WebDriver driver;
@@ -17,7 +12,7 @@ public class Amazon {
 	
 	@Test
 	public void LaunchAmazon() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.com");

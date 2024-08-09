@@ -1,29 +1,19 @@
 package TestNG;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.time.Duration;
-import java.util.Arrays;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class DataProvider_ParallelExecution {
 	@Test(dataProvider = "Login")
 	public void LoginPage(String username, String password) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		
+		WebDriver driver  = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

@@ -1,14 +1,10 @@
 package TestNG_Practice;
 
-import java.util.Iterator;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Attributes {
 
@@ -16,7 +12,7 @@ public class Attributes {
 	public void test1() throws InterruptedException {
 			
 		
-		WebDriverManager.chromedriver().setup();
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://randomuser.me/");
 		Thread.sleep(3000);

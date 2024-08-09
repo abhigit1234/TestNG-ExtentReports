@@ -1,14 +1,12 @@
 package TestNG_Practice;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestNGAssertions {
 
@@ -17,7 +15,7 @@ public class TestNGAssertions {
 
 	@Test
 	public void launch() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		Thread.sleep(3000);

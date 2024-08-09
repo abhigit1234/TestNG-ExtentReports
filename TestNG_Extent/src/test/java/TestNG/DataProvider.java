@@ -1,17 +1,9 @@
 package TestNG;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DataProvider {
 //with dataprovider name
@@ -19,7 +11,7 @@ public class DataProvider {
 //	@Test(dataProvider = "logindetails")
 //	public void LoginPage(String username, String password) throws InterruptedException {
 //
-//		WebDriverManager.chromedriver().setup();
+
 //		WebDriver driver = new ChromeDriver();
 //		driver.manage().window().maximize();
 //		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -49,7 +41,7 @@ public class DataProvider {
 		@Test(dataProvider = "Login")
 	public void LoginPage(String username, String password) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
+
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

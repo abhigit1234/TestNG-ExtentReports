@@ -1,10 +1,7 @@
 package TestNG;
 
-import org.testng.annotations.Test;
+import static org.testng.Assert.assertTrue;
 
-import static org.testng.Assert.*;
-
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -13,18 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameter;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class Parameters_enabled_optional {
 	WebDriver driver;
@@ -36,17 +27,17 @@ public class Parameters_enabled_optional {
 	public void InitialiseBrowser(@Optional("edge") String browserName) {
 		switch (browserName.toLowerCase()) {
 		case "chrome":
-			WebDriverManager.chromedriver().setup();
+		
 			driver = new ChromeDriver();
 			break;
 
 		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
+		
 			driver = new FirefoxDriver();
 			break;
 
 		case "edge":
-			WebDriverManager.edgedriver().setup();
+		
 			driver = new EdgeDriver();
 
 			break;

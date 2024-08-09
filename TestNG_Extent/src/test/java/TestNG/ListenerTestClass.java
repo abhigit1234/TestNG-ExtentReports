@@ -2,10 +2,7 @@ package TestNG;
 
 import static org.testng.Assert.assertTrue;
 
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.github.dockerjava.api.model.Image;
  //@Listeners({ITListener_Implements.class}) //while using xml we need to remove from class path
 public class ListenerTestClass{
 	@Test

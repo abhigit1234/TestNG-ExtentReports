@@ -4,17 +4,13 @@ package TestNG_Practice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class parameter {
 	WebDriver driver;
@@ -26,17 +22,17 @@ public class parameter {
 	public void initializeBrowser(@Optional ("firefox") String browser) {
 		switch (browser.toLowerCase()) {
 		case "chrome":
-			WebDriverManager.chromedriver().setup();
+			
 			driver = new ChromeDriver();
 			break;
 			
 		case "edge":
-			WebDriverManager.edgedriver().setup();
+			
 			driver = new EdgeDriver();
 			break;
 			
 		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
+			
 			driver = new FirefoxDriver();
 			break;
 

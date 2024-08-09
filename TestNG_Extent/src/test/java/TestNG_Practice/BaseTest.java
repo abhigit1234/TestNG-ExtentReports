@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -15,11 +14,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
@@ -31,15 +27,15 @@ public class BaseTest {
 	public void setup(String browser) {
 		switch (browser.toLowerCase()) {
 		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
+		
 			driver = new FirefoxDriver();
 			break;
 		case "edge":
-			WebDriverManager.edgedriver().setup();
+			
 			driver = new EdgeDriver();
 			break;
 		case "chrome":
-			WebDriverManager.chromedriver().setup();
+			
 			driver = new ChromeDriver();
 			break;
 
